@@ -1,0 +1,59 @@
+{% extends "base2.html" %}
+
+{% load static %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'produit/style.css' %}">
+    
+
+    <section class="mt-10 grid grid-cols-2 gap-10">
+        <div>
+          <img src="{% static 'images/product-thumb-10.png' %}" alt="Blue Chair" class="w-full rounded-xl shadow-lg">
+        </div>
+        <div>
+          <h1 class="text-4xl font-bold mb-4">Furniture you will love</h1>
+          <p class="text-gray-600 mb-4">
+            It is a long established fact that a reader will be distracted by the
+            readable content of a page when looking at its layout.
+          </p>
+          <div class="text-3xl font-bold text-yellow-500 mb-4">$399</div>
+          <button class="bg-yellow-500 text-white px-6 py-2 rounded-full hover:bg-yellow-600">
+            ADD TO CART
+          </button>
+        </div>
+      </section>
+      <!-- Product Details -->
+      <section class="mt-10 bg-white p-6 rounded-xl shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Product Details</h2>
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <h3 class="text-xl font-semibold">Size</h3>
+            <p class="text-gray-600">80 x 120 cm</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold">Material</h3>
+            <p class="text-gray-600">Wood & Fabric</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold">Shipping</h3>
+            <p class="text-gray-600">Free Worldwide</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="mt-16 mb-16">
+        <h2 class="text-2xl font-bold mb-8">Different Forms of the Product</h2>
+        <div class="flex justify-between gap-6">
+            <img src="{% static 'images/img2.png' %}" alt="Variant 1" class="w-1/5 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+            <img src="{% static 'images/img2.png' %}" alt="Variant 2" class="w-1/5 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+            <img src="{% static 'images/img2.png' %}" alt="Variant 3" class="w-1/5 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+            <img src="{% static 'images/img2.png' %}" alt="Variant 4" class="w-1/5 rounded-lg shadow-md transition-transform duration-300 hover:scale-105">
+        </div>
+    </section>
+{% endblock %}

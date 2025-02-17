@@ -1,0 +1,13 @@
+# Ignorer le dossier de l'environnement virtuel
+env/
+
+# Ignorer la base de données SQLite
+db.sqlite3
+
+# Ignorer les fichiers temporaires générés par Django (migrations, etc.)
+*.pyc
+__pycache__/
+
+# Ignorer les répertoires de static et templates si vous ne voulez pas les versionner
+static/
+templates/

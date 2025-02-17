@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="mat-card-container bg-white">
+      <mat-card class="form-card bg-white">
+        <div class="mat-card-header text-center ">
+          <img src="assets/images/Logo-APEC.png" alt="Logo APEC" class="mat-card-logo" />
+        </div>
+  
+        <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+          {{ errorMessage }}
+        </div>
+  
+        <form (ngSubmit)="onSubmit()">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Email</mat-label>
+            <input matInput id="email" type="email" [(ngModel)]="email" name="email" required />
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Mot de passe</mat-label>
+            <input matInput id="password" [type]="showPassword ? 'text' : 'password'" [(ngModel)]="password" name="password" required />
+            <button mat-icon-button matSuffix type="button" (click)="togglePassword()">
+              <mat-icon><i class="{{ showPassword ? "visibility_off" : "visibility" }}"></i>
+              </mat-icon>
+            </button>
+          </mat-form-field>
+  
+          <mat-checkbox [(ngModel)]="remember" name="remember">Se souvenir de moi</mat-checkbox>
+  
+          <div class="mt-3">
+            <a href="path-to-reset-password" *ngIf="showForgotPasswordLink">Mot de passe oublié ?</a>
+          </div>
+  
+          <div class="mt-3 text-center">
+            <button mat-raised-button color="primary" type="submit" class="full-width">SE CONNECTER</button>
+          </div>
+        </form>
+  
+        <div class="mt-3 text-center">
+          <p>Pas encore de compte ? <a href="path-to-register">S'inscrire</a></p>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+  
+
+  {% endblock %}
