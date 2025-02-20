@@ -18,8 +18,8 @@ def product_view(request):
 def Profil_view(request):
     return render(request, 'profil.html')
 
-#def login_view(request):
-  #  return render(request, 'login.html')
+def login_view(request):
+  return render(request, 'login.html')
 
-#def register_view(request):
- #   return render(request, 'register.html')
+def register_view(request):
+   return render(request, 'register.html')

@@ -8,7 +8,7 @@ urlpatterns = [
    path('MatIr', views.List_MatIr, name='list_matir'), 
    path('product/', views.product_view, name='product_page'),
    path('profil/', views.Profil_view, name='profil_page'),
-   #path('login/', views.login_view, name='login_page'),
-   #path('register/', views.register_view, name='register_page'),
+   path('login/', views.login_view, name='login_page'),
+   path('register/', views.register_view, name='register_page'),
    
 ]
